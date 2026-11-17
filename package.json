@@ -1,0 +1,25 @@
+{
+  "name": "discord-emoji-manager",
+  "version": "1.0.0",
+  "description": "Discord bot to bulk import and export server emojis and stickers as zip files",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Psykos971/discord-emoji-manager.git"
+  },
+  "license": "ISC",
+  "type": "module",
+  "engines": {
+    "node": ">=20.6"
+  },
+  "scripts": {
+    "start": "node --env-file=.env src/index.js",
+    "import": "node --env-file=.env src/cli/import.js",
+    "export": "node --env-file=.env src/cli/export.js",
+    "deploy": "node --env-file=.env src/deploy-commands.js"
+  },
+  "dependencies": {
+    "adm-zip": "^0.6.1",
+    "discord.js": "^14.28.1",
+    "sharp": "^0.35.5"
+  }
+}
